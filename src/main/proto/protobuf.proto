@@ -5,10 +5,13 @@ option java_package = "br.com.hernani";
 
 package br.com.hernani;
 
-import "google/protobuf/timestamp.proto";
-
 service FuncionarioService {
   rpc cadastraFuncionario (FuncionarioRequest) returns (FuncionarioResponse) {}
+}
+
+message ErrorDetails {
+  int32 code = 1;
+  string message = 2;
 }
 
 enum Cargo{
